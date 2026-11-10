@@ -29,6 +29,13 @@
                   "kind": "scalar"
                 }
               },
+              "github_id": {
+                "nullable": true,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                }
+              },
               "id": {
                 "nullable": false,
                 "type": {
@@ -44,7 +51,7 @@
                 }
               },
               "password": {
-                "nullable": false,
+                "nullable": true,
                 "type": {
                   "codecId": "pg/text@1",
                   "kind": "scalar"
@@ -73,6 +80,9 @@
                 },
                 "email": {
                   "column": "email"
+                },
+                "github_id": {
+                  "column": "github_id"
                 },
                 "id": {
                   "column": "id"
@@ -119,6 +129,11 @@
                   "nativeType": "text",
                   "nullable": false
                 },
+                "github_id": {
+                  "codecId": "pg/text@1",
+                  "nativeType": "text",
+                  "nullable": true
+                },
                 "id": {
                   "codecId": "pg/int4@1",
                   "default": {
@@ -136,7 +151,7 @@
                 "password": {
                   "codecId": "pg/text@1",
                   "nativeType": "text",
-                  "nullable": false
+                  "nullable": true
                 },
                 "updatedAt": {
                   "codecId": "pg/timestamptz-temporal@1",
@@ -165,6 +180,11 @@
                   "columns": [
                     "email"
                   ]
+                },
+                {
+                  "columns": [
+                    "github_id"
+                  ]
                 }
               ]
             }
@@ -174,7 +194,7 @@
         "kind": "postgres-schema"
       }
     },
-    "storageHash": "cb1098225675714162f5c7e12347d26cdfb4eda8aad117187fb882a25b8e37fb"
+    "storageHash": "617ff28b51baa4f01c86678a0794750192a5d71f5c56ec9723a2b2a8aae8912d"
   },
   "capabilities": {
     "postgres": {

@@ -6,13 +6,23 @@ import {
 import { JwtService } from '@nestjs/jwt';
 
 import * as bcrypt from 'bcrypt';
-import type { Response } from 'express';
+import type { CookieOptions, Response } from 'express';
 
 import { UsersService } from '../users/users.service';
 import { LoginDto, RegisterDto } from './dto/auth.dto';
 
 const SALT_ROUNDS = 10;
 const REFRESH_TOKEN_EXPIRE_DAYS = 7;
+
+export function refreshTokenCookieOptions(expires: Date): CookieOptions {
+  return {
+    httpOnly: true,
+    expires,
+    path: '/',
+    sameSite: 'lax',
+    secure: process.env.NODE_ENV === 'production',
+  };
+}
 
 @Injectable()
 export class AuthService {
@@ -28,7 +38,7 @@ export class AuthService {
 
     const user = await this.usersService.findByEmail(email);
 
-    if (!user) {
+    if (!user?.password) {
       throw new UnauthorizedException('Invalid credentials');
     }
 
@@ -105,22 +115,18 @@ export class AuthService {
     const expires = new Date();
     expires.setDate(expires.getDate() + REFRESH_TOKEN_EXPIRE_DAYS);
 
-    res.cookie(this.REFRESH_TOKEN_NAME, refreshToken, {
-      httpOnly: true,
-      expires,
-      path: '/',
-      sameSite: 'lax',
-      secure: true,
-    });
+    res.cookie(
+      this.REFRESH_TOKEN_NAME,
+      refreshToken,
+      refreshTokenCookieOptions(expires),
+    );
   }
 
   removeRefreshTokenFromResponse(res: Response) {
-    res.cookie(this.REFRESH_TOKEN_NAME, '', {
-      httpOnly: true,
-      expires: new Date(0),
-      path: '/',
-      sameSite: 'lax',
-      secure: true,
-    });
+    res.cookie(
+      this.REFRESH_TOKEN_NAME,
+      '',
+      refreshTokenCookieOptions(new Date(0)),
+    );
   }
 }

@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 
-import { RegisterDto } from '../auth/dto/auth.dto';
 import { PrismaService } from '../prisma/prisma.service';
+import { CreateUserDto } from './dto/users.dto';
 
 @Injectable()
 export class UsersService {
@@ -15,7 +15,13 @@ export class UsersService {
     return this.prisma.db.User.first({ email });
   }
 
-  async create(createUserDto: RegisterDto) {
+  async create(createUserDto: CreateUserDto) {
     return this.prisma.db.User.create(createUserDto);
+  }
+
+  async findByGithubId(githubId: string) {
+    return this.prisma.db.User.first({
+      github_id: githubId,
+    });
   }
 }

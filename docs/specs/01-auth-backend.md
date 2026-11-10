@@ -1,6 +1,6 @@
 # 01. Finish backend auth
 
-Status: in review. One commit. Do not start [02](02-auth-frontend.md) until this passes typecheck, lint, and tests.
+Status: done. One commit. Do not start [02](02-auth-frontend.md) until this passes typecheck, lint, and tests.
 
 Plan: [.cursor/plans/iteration-1-livekit.md](../../.cursor/plans/iteration-1-livekit.md).
 
