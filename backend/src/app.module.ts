@@ -13,6 +13,9 @@ export const { ObserveModule, ObserveInstrument } = createObserveModule();
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
     PrismaModule,
     UsersModule,
     AuthModule,
@@ -20,9 +23,6 @@ export const { ObserveModule, ObserveInstrument } = createObserveModule();
       global: true,
       secret: process.env.JWT_SECRET,
       signOptions: { expiresIn: '7d' },
-    }),
-    ConfigModule.forRoot({
-      isGlobal: true,
     }),
   ],
   controllers: [AppController],

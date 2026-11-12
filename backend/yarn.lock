@@ -2,7 +2,7 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 8
+  version: 10
   cacheKey: 10c0
 
 "@alcalzone/ansi-tokenize@npm:^0.2.4":
@@ -5031,6 +5031,7 @@ __metadata:
     "@types/supertest": "npm:^7.0.0"
     arctic: "npm:^3.7.0"
     bcrypt: "npm:^6.0.0"
+    class-transformer: "npm:^0.5.1"
     class-validator: "npm:^0.15.1"
     cookie-parser: "npm:^1.4.7"
     dotenv: "npm:^17.4.2"
@@ -5505,6 +5506,13 @@ __metadata:
   version: 2.2.1
   resolution: "cjs-module-lexer@npm:2.2.1"
   checksum: 10c0/889777eb1e32c4662bf3744fdf09aca444a3f9373d70a8c3d2a575e845e415988912a70a7b5e3c2bf943c7547d930dff641c4e0ff2ee2110ba1daca05b2310cd
+  languageName: node
+  linkType: hard
+
+"class-transformer@npm:^0.5.1":
+  version: 0.5.1
+  resolution: "class-transformer@npm:0.5.1"
+  checksum: 10c0/19809914e51c6db42c036166839906420bb60367df14e15f49c45c8c1231bf25ae661ebe94736ee29cc688b77101ef851a8acca299375cc52fc141b64acde18a
   languageName: node
   linkType: hard
 

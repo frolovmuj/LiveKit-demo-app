@@ -14,6 +14,11 @@ import { LoginDto, RegisterDto } from './dto/auth.dto';
 const SALT_ROUNDS = 10;
 const REFRESH_TOKEN_EXPIRE_DAYS = 7;
 
+function withoutPassword<T extends { password?: string | null }>(user: T) {
+  const { password: _password, ...publicUser } = user;
+  return publicUser;
+}
+
 export function refreshTokenCookieOptions(expires: Date): CookieOptions {
   return {
     httpOnly: true,
@@ -51,7 +56,7 @@ export class AuthService {
     const tokens = this.issueTokens(user.id);
 
     return {
-      user,
+      user: withoutPassword(user),
       ...tokens,
     };
   }
@@ -74,7 +79,7 @@ export class AuthService {
     const tokens = this.issueTokens(user.id);
 
     return {
-      user,
+      user: withoutPassword(user),
       ...tokens,
     };
   }
@@ -103,7 +108,7 @@ export class AuthService {
       }
 
       return {
-        user,
+        user: withoutPassword(user),
         ...this.issueTokens(user.id),
       };
     } catch {

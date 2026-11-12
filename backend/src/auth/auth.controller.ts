@@ -131,4 +131,10 @@ export class AuthController {
 
     return response;
   }
+
+  @Post('logout')
+  logout(@Res({ passthrough: true }) res: Response) {
+    this.authService.removeRefreshTokenFromResponse(res);
+    return { ok: true };
+  }
 }

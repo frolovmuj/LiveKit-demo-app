@@ -1,5 +1,6 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 
+import { CreateUserDto } from './dto/users.dto';
 import { UsersService } from './users.service.js';
 
 @Controller('users')
@@ -8,7 +9,7 @@ export class UsersController {
 
   @Get(':id')
   async getUser(@Param('id') id: string) {
-    return this.usersService.findOne(Number(id));
+    return this.usersService.findById(Number(id));
   }
 
   @Post()

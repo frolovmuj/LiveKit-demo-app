@@ -1,6 +1,6 @@
 # 02. Wire frontend auth
 
-Status: not started. One commit. Depends on [01](01-auth-backend.md). Do not start [03](03-meetings-backend.md) until this passes typecheck and lint, and the manual check below is done.
+Status: done. One commit. Depends on [01](01-auth-backend.md). Do not start [03](03-meetings-backend.md) until this passes typecheck and lint, and the manual check below is done.
 
 Plan: [.cursor/plans/iteration-1-livekit.md](../../.cursor/plans/iteration-1-livekit.md).
 
