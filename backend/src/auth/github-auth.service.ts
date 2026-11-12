@@ -4,7 +4,7 @@ import { ConfigService } from '@nestjs/config';
 import { GitHub } from 'arctic';
 import { randomBytes } from 'node:crypto';
 
-import { UsersService } from '../users/users.service';
+import { UsersService } from '../users/users.service.js';
 import { AuthService } from './auth.service.js';
 
 export type GithubAuthErrorCode =

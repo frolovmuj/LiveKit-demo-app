@@ -42,28 +42,28 @@ Chat:
 ### Out of scope for iteration 1
 Recording, persisted chat history, P2P without LiveKit, AI agent participant, waiting room / meeting passwords, anything not listed above.
 
-## Open questions (ask the user, do not assume)
-- Does the host (meeting creator) have special rights in iteration 1 (e.g. mute or remove others), or are all participants equal?
-- LiveKit Cloud or self-hosted?
-- How is an active screen share displayed (e.g. does it take the main area)?
-- Meeting link format and room lifetime (when does a room stop existing)?
-- Supported browsers; is mobile web required in iteration 1?
-- Expected maximum number of participants per room?
-
 ## Tech stack
-TBD. Decided together with the user in Plan Mode, then recorded here and in `docs/decisions.md`. Never pick the stack or add a major dependency silently.
+
+- Frontend: React Router 7, React 19, TanStack Query, Axios, MobX.
+- Backend: NestJS 12, Prisma Next on Postgres, `@nestjs/jwt`, bcrypt, Arctic for GitHub OAuth.
+- Meetings: LiveKit Cloud. The API issues room tokens with `livekit-server-sdk`. `@nestjs/throttler` limits creation and token issuance. `@nestjs/schedule` deletes expired meetings hourly.
+- Prisma `DateTime` values need `temporal-polyfill` on Node 24.
+
+Room rules are in `docs/decisions.md`. Do not reopen them without the user.
 
 ## Commands
-Fill in once the stack is chosen. Keep this list short and accurate.
+
+Run from the repository root.
 
 ```
-install:
-dev:
-build:
-typecheck:
-lint:
-test:
-e2e:
+install: yarn --cwd backend && yarn --cwd frontend
+dev: yarn --cwd backend start:dev
+     yarn --cwd frontend dev
+build: yarn --cwd backend build && yarn --cwd frontend build
+typecheck: yarn --cwd backend exec tsc --noEmit --incremental false && yarn --cwd frontend typecheck
+lint: yarn --cwd backend lint
+test: yarn --cwd backend test
+e2e: yarn --cwd backend test:e2e
 ```
 
 ## How we work

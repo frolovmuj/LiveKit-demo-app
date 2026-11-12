@@ -8,8 +8,8 @@ import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcrypt';
 import type { CookieOptions, Response } from 'express';
 
-import { UsersService } from '../users/users.service';
-import { LoginDto, RegisterDto } from './dto/auth.dto';
+import { UsersService } from '../users/users.service.js';
+import { LoginDto, RegisterDto } from './dto/auth.dto.js';
 
 const SALT_ROUNDS = 10;
 const REFRESH_TOKEN_EXPIRE_DAYS = 7;

@@ -1,6 +1,6 @@
 import { Injectable, OnModuleDestroy } from '@nestjs/common';
 
-import { db as client } from './db';
+import { db as client } from './db.js';
 
 @Injectable()
 export class PrismaService implements OnModuleDestroy {

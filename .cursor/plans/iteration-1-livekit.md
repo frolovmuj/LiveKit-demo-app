@@ -1,6 +1,6 @@
 # Iteration 1: LiveKit meetings
 
-Status: not started. Implement one spec at a time, in the order below. Each spec is one commit. When a spec is ready, run its checks and stop for review. Do not commit it, and do not start the next spec, until the user has reviewed it and explicitly approved moving on.
+Status: specs 01–03 are done. Implement one spec at a time, in the order below. Each spec is one commit. When a spec is ready, run its checks and stop for review. Do not commit it, and do not start the next spec, until the user has reviewed it and explicitly approved moving on.
 
 Out of scope: recording, persisted chat, P2P without LiveKit, an AI agent participant, a waiting room, meeting passwords, mobile layout.
 

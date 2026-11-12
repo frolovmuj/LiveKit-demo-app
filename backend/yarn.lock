@@ -776,6 +776,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@bufbuild/protobuf@npm:^1.10.0, @bufbuild/protobuf@npm:^1.10.1":
+  version: 1.10.1
+  resolution: "@bufbuild/protobuf@npm:1.10.1"
+  checksum: 10c0/a89572ae99aa193dd232fca0cdc9ece1dfe2f3d8b061be1f966a4f88fb63410aeb0fe7de927037e970aefcb52036eec58a7f89a40fe1286eed1448ea1bd2634e
+  languageName: node
+  linkType: hard
+
 "@chevrotain/cst-dts-gen@npm:10.5.0":
   version: 10.5.0
   resolution: "@chevrotain/cst-dts-gen@npm:10.5.0"
@@ -2325,6 +2332,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@livekit/protocol@npm:1.53.0":
+  version: 1.53.0
+  resolution: "@livekit/protocol@npm:1.53.0"
+  dependencies:
+    "@bufbuild/protobuf": "npm:^1.10.0"
+  checksum: 10c0/cf893e25afed95c4c6e8ebf4e2d46ccfb29d6718c25ce2e083f843fa1adb5273620af183a8af526e2925a464af442d2f6b55029227e3615a11cddfc80f326d77
+  languageName: node
+  linkType: hard
+
 "@lukeed/csprng@npm:^1.0.0":
   version: 1.1.0
   resolution: "@lukeed/csprng@npm:1.1.0"
@@ -2649,6 +2665,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nestjs/schedule@npm:^12.0.3":
+  version: 12.0.3
+  resolution: "@nestjs/schedule@npm:12.0.3"
+  dependencies:
+    cron: "npm:4.4.0"
+  peerDependencies:
+    "@nestjs/common": ^11.0.0 || ^12.0.0
+    "@nestjs/core": ^11.0.0 || ^12.0.0
+  checksum: 10c0/f3baa4b93c8f780fa02b2130f07e15d0d74c659c0ac7e5c91e96408fbd4d858fc54709b475d45855b2f9165f1d07510a9a84440e0948f275ae2bcafec18875f7
+  languageName: node
+  linkType: hard
+
 "@nestjs/schematics@npm:^12.0.0":
   version: 12.0.0
   resolution: "@nestjs/schematics@npm:12.0.0"
@@ -2684,6 +2712,17 @@ __metadata:
     "@nestjs/platform-express":
       optional: true
   checksum: 10c0/79efea430bd359b4d98ad20b81d9f2b589a3dbcb680dbe6e105622395ef953574e2ec6d92b4ce02e64ee45b5873efa1f16d94a27b03da72e5051accf16837711
+  languageName: node
+  linkType: hard
+
+"@nestjs/throttler@npm:^6.7.1":
+  version: 6.7.1
+  resolution: "@nestjs/throttler@npm:6.7.1"
+  peerDependencies:
+    "@nestjs/common": ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0
+    "@nestjs/core": ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0
+    reflect-metadata: ^0.1.13 || ^0.2.0
+  checksum: 10c0/c91ab43a7c5301862db24401ce84144c15c28c0f525de459da8c495cad4adf5e7aa14710b8dbe4a8b47fa564fbbc44784da90181c975978ed3ab56d794841ebb
   languageName: node
   linkType: hard
 
@@ -4159,6 +4198,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/luxon@npm:~3.7.0":
+  version: 3.7.6
+  resolution: "@types/luxon@npm:3.7.6"
+  checksum: 10c0/135c55910d8f4fb615cbfaa93b173e57e3eed9731da683005acdb84dba5ece5dbbf56cc82330015ccf5247a6e84fefbb2e2ebe255c957636f604f79efacb4214
+  languageName: node
+  linkType: hard
+
 "@types/methods@npm:^1.1.4":
   version: 1.1.4
   resolution: "@types/methods@npm:1.1.4"
@@ -5015,8 +5061,10 @@ __metadata:
     "@nestjs/observe": "npm:^0.1.8"
     "@nestjs/passport": "npm:^12.0.0"
     "@nestjs/platform-express": "npm:^12.0.1"
+    "@nestjs/schedule": "npm:^12.0.3"
     "@nestjs/schematics": "npm:^12.0.0"
     "@nestjs/testing": "npm:^12.0.1"
+    "@nestjs/throttler": "npm:^6.7.1"
     "@prisma/cli-engine": "npm:0.4.0"
     "@prisma/orm-postgres": "npm:8.0.0-rc.11"
     "@trivago/prettier-plugin-sort-imports": "npm:^6.0.2"
@@ -5036,6 +5084,7 @@ __metadata:
     cookie-parser: "npm:^1.4.7"
     dotenv: "npm:^17.4.2"
     jest: "npm:^30.0.0"
+    livekit-server-sdk: "npm:^2.19.3"
     oxlint: "npm:^1.58.0"
     passport: "npm:^0.7.0"
     passport-jwt: "npm:^4.0.1"
@@ -5046,6 +5095,7 @@ __metadata:
     rxjs: "npm:^7.8.1"
     source-map-support: "npm:^0.5.21"
     supertest: "npm:^7.0.0"
+    temporal-polyfill: "npm:^1.0.8"
     ts-jest: "npm:^29.2.5"
     ts-loader: "npm:^9.5.2"
     ts-node: "npm:^10.9.2"
@@ -5888,6 +5938,16 @@ __metadata:
   version: 1.1.1
   resolution: "create-require@npm:1.1.1"
   checksum: 10c0/157cbc59b2430ae9a90034a5f3a1b398b6738bf510f713edc4d4e45e169bc514d3d99dd34d8d01ca7ae7830b5b8b537e46ae8f3c8f932371b0875c0151d7ec91
+  languageName: node
+  linkType: hard
+
+"cron@npm:4.4.0":
+  version: 4.4.0
+  resolution: "cron@npm:4.4.0"
+  dependencies:
+    "@types/luxon": "npm:~3.7.0"
+    luxon: "npm:~3.7.0"
+  checksum: 10c0/e3762fda4a9a2404ac2e54e1104a3c6c695747e14b2321bbc5531aa1192c75a319075695fcaf68b6927e0ffd877b5454f314c680f6586db1a78b2c25b76b8a32
   languageName: node
   linkType: hard
 
@@ -7875,6 +7935,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jose@npm:^5.1.2":
+  version: 5.10.0
+  resolution: "jose@npm:5.10.0"
+  checksum: 10c0/e20d9fc58d7e402f2e5f04e824b8897d5579aae60e64cb88ebdea1395311c24537bf4892f7de413fab1acf11e922797fb1b42269bc8fc65089a3749265ccb7b0
+  languageName: node
+  linkType: hard
+
 "js-base64@npm:^3.7.5":
   version: 3.9.3
   resolution: "js-base64@npm:3.9.3"
@@ -8090,6 +8157,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"livekit-server-sdk@npm:^2.19.3":
+  version: 2.19.3
+  resolution: "livekit-server-sdk@npm:2.19.3"
+  dependencies:
+    "@bufbuild/protobuf": "npm:^1.10.1"
+    "@livekit/protocol": "npm:1.53.0"
+    jose: "npm:^5.1.2"
+  checksum: 10c0/2e33c38f20b50f0c4fd11f11c19717b91b356b04af88607baded7e1e558feaa4d3ffc3b8fc94dd2995ceb159b6f758f186c02dfa6d7424f22be9b5b059abe5d4
+  languageName: node
+  linkType: hard
+
 "load-esm@npm:1.0.3":
   version: 1.0.3
   resolution: "load-esm@npm:1.0.3"
@@ -8223,6 +8301,13 @@ __metadata:
   dependencies:
     yallist: "npm:^3.0.2"
   checksum: 10c0/89b2ef2ef45f543011e38737b8a8622a2f8998cddf0e5437174ef8f1f70a8b9d14a918ab3e232cb3ba343b7abddffa667f0b59075b2b80e6b4d63c3de6127482
+  languageName: node
+  linkType: hard
+
+"luxon@npm:~3.7.0":
+  version: 3.7.2
+  resolution: "luxon@npm:3.7.2"
+  checksum: 10c0/ed8f0f637826c08c343a29dd478b00628be93bba6f068417b1d8896b61cb61c6deacbe1df1e057dbd9298334044afa150f9aaabbeb3181418ac8520acfdc2ae2
   languageName: node
   linkType: hard
 
@@ -10348,6 +10433,30 @@ __metadata:
   dependencies:
     streamx: "npm:^2.12.5"
   checksum: 10c0/8df9166c037ba694b49d32a49858e314c60e513d55ac5e084dbf1ddbb827c5fa43cc389a81e87684419c21283308e9d68bb068798189c767ec4c252f890b8a77
+  languageName: node
+  linkType: hard
+
+"temporal-polyfill@npm:^1.0.8":
+  version: 1.0.8
+  resolution: "temporal-polyfill@npm:1.0.8"
+  dependencies:
+    temporal-spec: "npm:1.0.1"
+    temporal-utils: "npm:1.0.4"
+  checksum: 10c0/91f225c02a39f824ce71b3710e9cbf8e28e9fb40428c42b5ee067263737a34005fa61b87822bce207e6ad4257b0ee40fb29c2cdbf540aba7fda5809f276f7f61
+  languageName: node
+  linkType: hard
+
+"temporal-spec@npm:1.0.1":
+  version: 1.0.1
+  resolution: "temporal-spec@npm:1.0.1"
+  checksum: 10c0/99f6bfe4a8e59cd0664d0e97706798a1e10d42b1b682da9b60778a4cb9a23362da01ea3d83a674ef426ed743bbab835e2e3d1acea5d2d4a9eabe33863237b014
+  languageName: node
+  linkType: hard
+
+"temporal-utils@npm:1.0.4":
+  version: 1.0.4
+  resolution: "temporal-utils@npm:1.0.4"
+  checksum: 10c0/cd5105d49f01794c5adfde697178364a70b56c28be60119922bbb1a96dd4d8de43537fa31883aff85e0c18b39cd2e1d2facfc794750e03621c6983f95b39da1b
   languageName: node
   linkType: hard
 

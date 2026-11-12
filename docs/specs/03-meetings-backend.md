@@ -1,6 +1,6 @@
 # 03. Meetings API
 
-Status: not started. One commit. Depends on [02](02-auth-frontend.md). Do not start [04](04-home-and-join.md) until this passes typecheck, lint, and the Jest tests below.
+Status: done. One commit. Depends on [02](02-auth-frontend.md). Do not start [04](04-home-and-join.md) until this passes typecheck, lint, and the Jest tests below.
 
 Plan: [.cursor/plans/iteration-1-livekit.md](../../.cursor/plans/iteration-1-livekit.md).
 
