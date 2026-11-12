@@ -1,18 +1,16 @@
-import type { FC } from 'react';
-
-import { Link } from 'react-router';
+import type { FC, ReactNode } from 'react';
 
 import { cn } from 'cn';
 
 import { AuroraBackground } from '@shared/ui/AuroraBackground';
-import { buttonVariants } from '@shared/ui/Button';
 import { NoiseOverlay } from '@shared/ui/NoiseOverlay';
 
 type AuroraBlockProps = {
   className?: string;
+  action: ReactNode;
 };
 
-export const AuroraBlock: FC<AuroraBlockProps> = ({ className }) => {
+export const AuroraBlock: FC<AuroraBlockProps> = ({ className, action }) => {
   return (
     <section
       className={cn(
@@ -37,9 +35,7 @@ export const AuroraBlock: FC<AuroraBlockProps> = ({ className }) => {
           <p className="text-sm leading-6 font-light opacity-70">
             Создай встречу и общайся с другими пользователями без ограничений.
           </p>
-          <Link to="/login" className={cn(buttonVariants({ size: 'lg' }), 'w-fit')}>
-            Начать встречу
-          </Link>
+          {action}
         </div>
       </div>
     </section>

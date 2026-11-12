@@ -1,6 +1,6 @@
 # 04. Home and join
 
-Status: not started. One commit. Depends on [03](03-meetings-backend.md). Do not start [05](05-meeting-room.md) until this passes typecheck and lint, and the manual check below is done.
+Status: done. One commit. Depends on [03](03-meetings-backend.md). Do not start [05](05-meeting-room.md) until this passes typecheck and lint, and the manual check below is done.
 
 Plan: [.cursor/plans/iteration-1-livekit.md](../../.cursor/plans/iteration-1-livekit.md).
 
